@@ -44,23 +44,23 @@ const projects = [
 </script>
 
 <template>
-  <div class="p-10">
-    <h1 class="text-3xl font-bold mb-6">Projects</h1>
+  <div class="p-10 mb-[20rem]">
+    <h1 class="text-3xl font-extrabold mb-6 flex justify-center">PROJETS</h1>
 
     <div class="grid grid-cols-1 md:grid-cols-2 gap-6 p-6 shadow-xl rounded-xl">
       <div 
         v-for="project in projects" 
         :key="project.title"
-        class="p-6 border rounded-xl shadow hover:shadow-lg transition-shadow duration-300 bg-gray-200 hover:bg-gray-100"
+        class="p-6 border rounded-xl shadow hover:shadow-lg transition-shadow duration-300 bg-gray-200 hover:bg-gray-100 "
       >
 
         <h2 class="text-xl font-bold">{{ project.title }}</h2>
-        <p class="text-gray-600">{{ project.description }}</p>
+        <p class="text-gray-800 text-lg">{{ project.description }}</p>
         <a 
           :href="project.link" 
           target="_blank" 
           rel="noopener noreferrer"
-          class="text-blue-500 hover:text-blue-700"
+          class="text-blue-500 hover:text-blue-700 font-bold"
         >
           Voir le projet
         </a>
