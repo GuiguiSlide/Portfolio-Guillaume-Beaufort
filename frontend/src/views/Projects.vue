@@ -1,14 +1,45 @@
 <script setup lang="ts">
 const projects = [
-  {
-    title: "Portfolio",
-    description: "Mon portfolio en Vue + Tailwind + NodeJS + Typescript + Express",
-    link: "https://github.com/GuiguiSlide/Portfolio-Guillaume-Beaufort"
-  },
-  {
-    title: "API Node",
-    description: "Backend avec Express + TypeScript",
-  }
+    {
+        title: "Portfolio",
+        description: "Mon portfolio en Vue + Tailwind + NodeJS + Typescript + Express",
+        link: "https://github.com/GuiguiSlide/Portfolio-Guillaume-Beaufort"
+    },
+    {
+        title: "Minilib",
+        description: "Faire un site avec un librairie pour exemple pour apprendre le nodeJS + typescript + Express + postgreSQL + docker",
+        link: "https://github.com/GuiguiSlide/Minilib-Guillaume-Beaufort"
+    },
+    {
+        title: "ChessPython",
+        description: "Un jeu d'échecs développé en Python avec ursina en utilisant l'algorithme Minimax pour l'IA. + l'utilisation de Blender pour les modèles 3D",
+        link: "https://github.com/GuiguiSlide/ChessPython"
+    },
+    {
+        title: "AquaPunk",
+        description: "Projet collaboratif de Tower Defense en Godot en 3D dans un univers aquatique développé pour la GameJam du Cesi en 2025",
+        link: "https://github.com/GuiguiSlide/GuiguiSlide-projet_gamejam_2025_cesi"
+    },
+    {
+        title: "site web cuisine",
+        description: "Un site web pour trouver des recettes par rapport aux produits en stock, développé en Svelte, TailwindCSS et NodeJS avec une base de données PostgreSQL",
+        link: "https://github.com/GuiguiSlide/siteweb_cuisine"
+    },
+    {
+        title: "Untrustpilot",
+        description: "Projet collaboratif pour tester vos connaissances en cybersecurité, j'ai fait le Frontend en Svelte et TailwindCSS",
+        link: "https://github.com/GuiguiSlide/GuiguiSlide-Untrustpilot"
+    },
+    {
+        title: "Station Météo",
+        description: "Projet collaboratif Arduino+HTML+CSS+JS: projet station météo projeté sur un site depuis une machine programmée en Arduino",
+        link: "https://github.com/GuiguiSlide/Station_m-t-o"
+    },
+    {
+        title: "Cassebrique",
+        description: "Un jeu de casse-brique développé en C avec la librairie SDL2 ma première expérience dans la programmation",
+        link: "https://github.com/GuiguiSlide/GuiguiSlide-cassebrique"
+    }
 ]
 </script>
 
@@ -16,12 +47,13 @@ const projects = [
   <div class="p-10">
     <h1 class="text-3xl font-bold mb-6">Projects</h1>
 
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 p-6 shadow-xl rounded-xl">
       <div 
         v-for="project in projects" 
         :key="project.title"
-        class="p-6 border rounded-xl shadow"
+        class="p-6 border rounded-xl shadow hover:shadow-lg transition-shadow duration-300 bg-gray-200 hover:bg-gray-100"
       >
+
         <h2 class="text-xl font-bold">{{ project.title }}</h2>
         <p class="text-gray-600">{{ project.description }}</p>
         <a 
@@ -32,6 +64,7 @@ const projects = [
         >
           Voir le projet
         </a>
+
       </div>
     </div>
   </div>
