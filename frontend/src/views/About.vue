@@ -18,7 +18,7 @@
       
       <div class="flex justify-center gap-2 mb-10">
         <button 
-          v-for="(lang, index) in languages"
+          v-for="(_lang, index) in languages"
           :key="index"
           @click="currentIndex = index"
           :class="['w-2 h-2 rounded-full', index === currentIndex ? 'bg-white' : 'bg-white/50']"
