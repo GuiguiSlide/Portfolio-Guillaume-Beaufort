@@ -2,6 +2,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 
 const routes = [
   { path: '/', redirect: '/home' },
+  { path: '/Portfolio-Guillaume-Beaufort', redirect: '/home' },
   { path: '/home', component: () => import('../views/Home.vue') },
   { path: '/projects', component: () => import('../views/Projects.vue') },
   { path: '/about', component: () => import('../views/About.vue') },
