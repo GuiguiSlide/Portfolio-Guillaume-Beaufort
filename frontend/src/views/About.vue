@@ -34,6 +34,7 @@
 
 <script setup lang="ts">
 import { ref, onMounted, onUnmounted } from 'vue'
+import { useRouter } from 'vue-router'
 
 interface Language {
   name: string
@@ -59,6 +60,7 @@ const languages = ref<Language[]>([
 
 const currentIndex = ref(0)
 let slideInterval: ReturnType<typeof setInterval> | null = null
+const router = useRouter()
 
 const nextSlide = () => {
   currentIndex.value = (currentIndex.value + 1) % languages.value.length
@@ -69,7 +71,7 @@ const prevSlide = () => {
 }
 
 const handleClick = () => {
-    window.location.href = '/projects';
+  router.push('/projects')
 }
 
 onMounted(() => {

@@ -1,13 +1,18 @@
 <script setup>
+import { useRouter } from 'vue-router'
+
+const router = useRouter()
+
 const scrollToProjects = () => {
-  const projectsElement = document.getElementById("projects");
+  const projectsElement = document.getElementById("projects")
   if (projectsElement) {
-    projectsElement.scrollIntoView({ behavior: "smooth" });
+    projectsElement.scrollIntoView({ behavior: "smooth" })
   }
-};
+}
+
 const handleClick = () => {
-  window.location.href = "/about";
-};
+  router.push('/about')
+}
 </script>
 
 <template>
